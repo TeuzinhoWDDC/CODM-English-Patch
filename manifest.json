@@ -1,31 +1,79 @@
 {
   "package_name": "CODM English Patch",
-  "package_version": "0.1",
+  "package_version": "0.2",
   "package_date": "2026-10-17",
-  "tested_catalog_sha256": "626d73a33c935dafc139635cb995a8ea717b4054359789f0a0da909af072f127",
+  "source_archive_sha256": "25db47665c230d93245e3a80ed613e02b9814d32b2d1ffe0f38a0a71b1589bfc",
+  "previous_patch_sha256": "626d73a33c935dafc139635cb995a8ea717b4054359789f0a0da909af072f127",
+  "previous_direct_v0_1_install_sha256": "459c24040070c13c4abfcc973507df2cdc39140a5f644b26dfb8b29c99741772",
+  "tested_catalog_sha256": "0064682c2b576167424ca9f61706dd204bb5a353da4a9ce60f453067e3cab9c5",
   "payload": {
     "main_archive": "Payload/CODM_Data/StreamingAssets/0db.bytes",
-    "main_archive_sha256": "626d73a33c935dafc139635cb995a8ea717b4054359789f0a0da909af072f127",
-    "main_archive_bytes": 47216342,
+    "main_archive_sha256": "0064682c2b576167424ca9f61706dd204bb5a353da4a9ce60f453067e3cab9c5",
+    "main_archive_bytes": 47210326,
     "english_locale": "Payload/PersistentData/ExtractQts/57/LanguageBytes/cPVHOPHMaPLBpJJZRZNM_IG_lv.bytes",
     "english_locale_sha256": "3e7f570ff4d96ed0f3d6c885a9f5494df9022c983a9ceec67cfa9ad1c0439ed9",
     "english_locale_bytes": 41978
   },
-  "update_reapplication": {
-    "translation_map": "translations.json.gz",
-    "translation_map_sha256": "d7c88fbdc1e233dc28cbf2007f69e8f2505ff540c9b05edbed6c5efcdcaedeef",
-    "unique_chinese_to_english_pairs": 130652,
-    "conflicting_pairs": 0,
-    "behavior": "Reapplies exact known translations to a compatible updated catalog and preserves unrelated archive members. Stops without writing if the catalog layout is unsupported or no known strings match."
+  "translation_map": {
+    "path": "translations.json.gz",
+    "sha256": "67fcdacab2d6410e05c082a25b1c421984184ab24942fae3b47bf3a4f1846d74",
+    "bytes": 3680465,
+    "pairs": 130989
   },
-  "runtime": {
-    "bundled": true,
-    "implementation": "CPython 3.15",
-    "license_file": "Runtime/Python315/LICENSE.txt"
+  "main_catalog": {
+    "records": 226226,
+    "source_records_with_cjk": 164256,
+    "translated_records": 164256,
+    "remaining_records_with_cjk": 0,
+    "unique_cjk_source_phrases": 130989,
+    "translation_pairs": 130989,
+    "official_local_english_pairs": 111,
+    "official_pairs_changed_by_overlay": 6,
+    "non_target_archive_members_verified_unchanged": 1402,
+    "format_or_placeholder_mismatches": 0,
+    "manual_reviewed_new_phrases": 160,
+    "targeted_legacy_phrase_overrides": 26
+  },
+  "translation_method": {
+    "new_337_sources": "111 exact English matches from the installed paired locale, 160 manually rewritten after local Argos drafting, and 66 manually authored exact entries or patterns.",
+    "legacy_130652_phrases": "Existing translations received targeted terminology normalization and selected corrections, but were not reviewed one by one.",
+    "global_english_parity": "Not certified; matching English resources for this exact client build are unavailable.",
+    "canonical_terms": [
+      "Battle Pass",
+      "Calling Card",
+      "Avatar Frame",
+      "Operator Skill",
+      "Scorestreak",
+      "Buy Station",
+      "Battle Royale",
+      "Clan",
+      "Squad",
+      "Store",
+      "Lobby",
+      "COD Points",
+      "Credits"
+    ]
+  },
+  "other_assets": {
+    "TextJson": "70 entries inventoried; encrypted or unknown container format remains unresolved.",
+    "DataTableBytes": "1,174 entries inventoried; format-aware CJK extraction is not completed.",
+    "DataAssetBytes": 25,
+    "DataPropertyBytes": 12,
+    "server_delivered_or_image_video_text": "not covered"
+  },
+  "installer": {
+    "accepts_exact_v0_1_package_hash_upgrade": true,
+    "exact_v0_1_package_hash": "626d73a33c935dafc139635cb995a8ea717b4054359789f0a0da909af072f127",
+    "accepts_exact_v0_1_direct_install_hash_upgrade": true,
+    "exact_v0_1_direct_install_hash": "459c24040070c13c4abfcc973507df2cdc39140a5f644b26dfb8b29c99741772",
+    "backup_before_write": true,
+    "game_install_modified_during_build": false
   },
   "limitations": [
-    "Future versions may introduce untranslated strings that require an updated translation map.",
-    "Updates that change the internal catalog format require a new patch release.",
-    "The package does not guarantee compatibility with every future game update."
+    "This release replaces every CJK-bearing record in the main 0db language catalog, including login and loading entries found there.",
+    "It does not cover opaque tables, server-delivered content, or text baked into images and videos; this is not a full-client translation.",
+    "The 130,652 phrases inherited from v0.1 were not individually reviewed; long descriptions may still sound unnatural.",
+    "Exact COD Mobile Global wording is not certified because a matching Global catalog for this client build is unavailable.",
+    "The user confirmed the v0.2 clone operates; no screen-by-screen visual review has been recorded."
   ]
 }

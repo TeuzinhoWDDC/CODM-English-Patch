@@ -20,7 +20,10 @@ LOCALE_RELATIVE = Path(
     "cPVHOPHMaPLBpJJZRZNM_IG_lv.bytes"
 )
 ARCHIVE_CATALOG = "LanguageBytes/cPVHOPHMaPLB_IG_lv.bytes"
-CURRENT_PATCH_SHA256 = "626d73a33c935dafc139635cb995a8ea717b4054359789f0a0da909af072f127"
+CURRENT_PATCH_SHA256 = "0064682c2b576167424ca9f61706dd204bb5a353da4a9ce60f453067e3cab9c5"
+PREVIOUS_PATCH_SHA256 = "626d73a33c935dafc139635cb995a8ea717b4054359789f0a0da909af072f127"
+# v0.1 applied directly to the tested source build produces this archive hash.
+PREVIOUS_DIRECT_V01_SHA256 = "459c24040070c13c4abfcc973507df2cdc39140a5f644b26dfb8b29c99741772"
 SOURCE_ARCHIVE_SHA256 = "25db47665c230d93245e3a80ed613e02b9814d32b2d1ffe0f38a0a71b1589bfc"
 OLD_LOCALE_SHA256 = "77176686955a8d3b1dc7d7e7b78aaab98eb1853ad8939ed58f5b9b097aff02e3"
 ENGLISH_LOCALE_SHA256 = "3e7f570ff4d96ed0f3d6c885a9f5494df9022c983a9ceec67cfa9ad1c0439ed9"
@@ -220,12 +223,21 @@ def apply_patch() -> int:
     current_hash = sha256(current_main)
     current_locale_hash = sha256(locale_path.read_bytes()) if locale_path.is_file() else None
 
-    # Este é exatamente o arquivo que o usuário confirmou funcionando.
+    # Upgrade only exact v0.1 catalogs that match this analyzed client build.
+    upgrade_from_previous = False
     if current_hash == CURRENT_PATCH_SHA256:
         updated_main = current_main
         translated_occurrences = 0
         remaining_cjk = None
         already_current = True
+    elif current_hash in {PREVIOUS_PATCH_SHA256, PREVIOUS_DIRECT_V01_SHA256}:
+        updated_main = PAYLOAD_MAIN.read_bytes()
+        if sha256(updated_main) != CURRENT_PATCH_SHA256:
+            raise ValueError("O payload v0.2 não corresponde ao hash declarado; o jogo não foi alterado.")
+        translated_occurrences = 0
+        remaining_cjk = 0
+        already_current = False
+        upgrade_from_previous = True
     else:
         already_current = False
         translations = load_translations()
@@ -331,7 +343,9 @@ def apply_patch() -> int:
 
     final_hash = sha256(updated_main)
     if already_current:
-        translation_summary = "O catálogo principal já tinha a versão confirmada."
+        translation_summary = "O catálogo principal já está na versão v0.2."
+    elif upgrade_from_previous:
+        translation_summary = "O catálogo v0.1 foi atualizado para v0.2; nenhum registro chinês permanece no catálogo principal."
     else:
         translation_summary = (
             f"Novos textos conhecidos traduzidos: {translated_occurrences:,}\n"
