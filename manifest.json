@@ -1,0 +1,31 @@
+{
+  "package_name": "CODM English Patch",
+  "package_version": "0.1",
+  "package_date": "2026-10-17",
+  "tested_catalog_sha256": "626d73a33c935dafc139635cb995a8ea717b4054359789f0a0da909af072f127",
+  "payload": {
+    "main_archive": "Payload/CODM_Data/StreamingAssets/0db.bytes",
+    "main_archive_sha256": "626d73a33c935dafc139635cb995a8ea717b4054359789f0a0da909af072f127",
+    "main_archive_bytes": 47216342,
+    "english_locale": "Payload/PersistentData/ExtractQts/57/LanguageBytes/cPVHOPHMaPLBpJJZRZNM_IG_lv.bytes",
+    "english_locale_sha256": "3e7f570ff4d96ed0f3d6c885a9f5494df9022c983a9ceec67cfa9ad1c0439ed9",
+    "english_locale_bytes": 41978
+  },
+  "update_reapplication": {
+    "translation_map": "translations.json.gz",
+    "translation_map_sha256": "d7c88fbdc1e233dc28cbf2007f69e8f2505ff540c9b05edbed6c5efcdcaedeef",
+    "unique_chinese_to_english_pairs": 130652,
+    "conflicting_pairs": 0,
+    "behavior": "Reapplies exact known translations to a compatible updated catalog and preserves unrelated archive members. Stops without writing if the catalog layout is unsupported or no known strings match."
+  },
+  "runtime": {
+    "bundled": true,
+    "implementation": "CPython 3.15",
+    "license_file": "Runtime/Python315/LICENSE.txt"
+  },
+  "limitations": [
+    "Future versions may introduce untranslated strings that require an updated translation map.",
+    "Updates that change the internal catalog format require a new patch release.",
+    "The package does not guarantee compatibility with every future game update."
+  ]
+}

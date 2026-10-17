@@ -1,0 +1,13 @@
+# Local game files and generated release payload
+/Payload/
+/Runtime/
+/Backups/
+/GamePath.txt
+/translations.json.gz
+/Last-Run-Report.txt
+/CODM-English-Patch-*.zip
+/CODM_Data/
+/PersistentData/
+*.bytes
+__pycache__/
+*.py[cod]
