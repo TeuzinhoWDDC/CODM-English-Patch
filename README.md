@@ -1,53 +1,26 @@
-# CODM English Patch
+# CODM English Patch — final release v0.3 (discontinued)
 
-Community-made English interface patch for the Chinese Call of Duty: Mobile
-Windows client. It uses the game files already installed on your computer; it
-does not include the complete game client and is not affiliated with
-Activision or Tencent.
+> **Warning: discontinued and unofficial.** This patch modifies Call of Duty: Mobile game files. Activision's published COD Mobile security policy describes enforcement for unauthorized software that modifies game data and for reverse engineering game data. A patch that only changes text is **not guaranteed to be safe**; using it may trigger anti-cheat checks or account penalties, including a ban. Use at your own risk. For the lowest account risk, keep and play on an unmodified official installation.
 
-## Latest release
+This community project is not affiliated with or endorsed by Activision or Tencent. It is discontinued: v0.3 is the final release, with no future updates, compatibility fixes, or support planned. The Chinese edition may have separate publisher rules; this patch has no publisher authorization.
 
-**v0.2** — download the portable package from
-[GitHub Releases](https://github.com/TeuzinhoWDDC/CODM-English-Patch/releases/latest).
+## What v0.3 contains
 
-The patch replaces every Chinese-bearing record in the main language catalog
-for the analyzed build: 164,256 records across 130,989 unique phrases. It also
-creates a backup before changing game files and can upgrade the exact v0.1
-catalogs listed in the package manifest.
+- The English UI patch for the analyzed Windows client build, including tested lobby, settings, and store wording updates.
+- The correction of the `day/days` to `Jesus` mistranslations found in the tested catalog.
+- A portable patcher that backs up target files before writing.
+- A Portuguese guide for applying and restoring the patch.
 
-## Quick start
+The user reported that the v0.3 clone worked after the latest corrections. This is not a guarantee for other installs or game updates. The patch changes local language resources; that does not make it ban-safe or publisher-approved.
 
-1. Download and extract `CODM-English-Patch-v0.2.zip` to its own folder.
-2. Close CODM and the emulator completely.
-3. Run `Apply-Translation.cmd`. Administrator access is not required.
-4. When asked, enter the game folder containing both `CODM.exe` and
-   `CODM_Data` (for example, `F:\CODMGameApps\CN\emulator\Extract\CODM`).
-5. Wait for the success message, note the backup location, then start the game
-   normally.
+## Download and use
 
-See the full [Portuguese installation and restore tutorial](TUTORIAL-PT-BR.md).
+Download `CODM-English-Patch-v0.3.zip` from [GitHub Releases](https://github.com/TeuzinhoWDDC/CODM-English-Patch/releases/latest). Read [TUTORIAL-PT-BR.md](TUTORIAL-PT-BR.md) and the warning above before using it. The package does not include the complete game client. It is tied to the catalog build recorded in `manifest.json`; newer or different builds may not work.
 
-## Backups, updates, and recovery
+The patcher makes backups under `Backups/<date-time>/`. To restore the original resources, close the game and restore those files to their original paths, or use the official launcher's repair/verification option. A clean official installation is the safest choice for normal online play.
 
-The patcher saves files under `Backups/<date-time>/` before writing. To undo
-the patch, close the game and copy those files back to the same paths in the
-game folder. After a game update, run the patcher again only if the catalog
-format is still recognized. Compatibility with future updates is not
-guaranteed.
+## Coverage and limits
 
-## Scope and known limits
+The patch covers the language resources included in this final package. Text delivered by servers, embedded in artwork/video, or stored in opaque resources may remain in Chinese. Global wording parity is not certified for every string. Compatibility with future game updates is not maintained.
 
-- Coverage is complete only for Chinese strings in the main `0db.bytes`
-  language catalog of the analyzed build. Other tables, server-delivered text,
-  and words embedded in images or videos are outside this release.
-- The 130,652 phrases inherited from v0.1 received targeted term normalization
-  and selected corrections, but were not reviewed one by one. Some long
-  descriptions may still sound unnatural.
-- Exact wording parity with COD Mobile Global is not certified because a
-  matching Global language catalog for this client build is unavailable.
-- The patch changes interface resources only; it does not change login,
-  servers, backend behavior, or gameplay protections.
-
-The repository contains the patcher and documentation. The portable release
-package and its bundled runtime are published as a GitHub Release, not stored
-in Git history.
+**Final status: discontinued.** No further translations, troubleshooting, or compatibility work will be provided.

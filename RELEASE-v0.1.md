@@ -1,22 +1,22 @@
-# CODM English Patch v0.1
+> **Historical release; project discontinued.** v0.3 is the final edition. This patch modifies game files and may trigger anti-cheat checks or account sanctions, including a ban. A text-only patch is not guaranteed to be safe. Use at your own risk; an unmodified official installation is the lowest-risk option.
 
-## Conteúdo
+# CODM English Patch v0.1 (historical)
 
-- Pacote portátil para Windows x64 com CPython 3.15 incluído.
-- Catálogo correspondente à versão que o usuário confirmou funcionando.
-- Aplicador que salva cópias de segurança e tenta reaplicar traduções conhecidas após atualizações compatíveis.
-- 130.652 pares de tradução sem conflitos identificados.
+This release is superseded by v0.3. It is preserved for reference and is no longer maintained.
 
-## Uso
+## Contents
 
-Extraia `CODM-English-Patch-v0.1.zip` e execute `Apply-Translation.cmd`. Após cada atualização do jogo, feche o jogo e execute o aplicador novamente.
+- Portable Windows x64 package with CPython 3.15.
+- Catalog for the analyzed client build, which the user reported working at the time.
+- Patcher that creates backups before changing files.
+- 130,652 translation pairs.
 
-## Limites conhecidos
+## Status and limits
 
-O aplicador interrompe sem gravar se o formato do catálogo deixar de ser reconhecido ou se nenhuma tradução conhecida corresponder. Textos novos precisam de outra versão do mapa de tradução. A reaplicação é manual e a compatibilidade com atualizações futuras não é garantida.
+Do not assume v0.1 works with current or updated game files. No compatibility updates or support are planned. The patch is unofficial and is not authorized by Activision or Tencent.
 
-## Verificação do arquivo
+## Historical download integrity
 
-- Arquivo: `CODM-English-Patch-v0.1.zip`
-- Tamanho: 76.884.577 bytes
+- File: `CODM-English-Patch-v0.1.zip`
+- Size: 76,884,577 bytes
 - SHA-256: `8F3F9ACAF98CAE09965DB5527B9FC990CBA5074B0C6173BDCA32316DDE9CC8D3`

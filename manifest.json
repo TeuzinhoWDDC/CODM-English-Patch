@@ -1,23 +1,23 @@
 {
-  "package_name": "CODM English Patch",
-  "package_version": "0.2",
+  "package_name": "CODM English Patch — final",
+  "package_version": "0.3",
   "package_date": "2026-10-17",
   "source_archive_sha256": "25db47665c230d93245e3a80ed613e02b9814d32b2d1ffe0f38a0a71b1589bfc",
-  "previous_patch_sha256": "626d73a33c935dafc139635cb995a8ea717b4054359789f0a0da909af072f127",
+  "previous_patch_sha256": "0064682c2b576167424ca9f61706dd204bb5a353da4a9ce60f453067e3cab9c5",
   "previous_direct_v0_1_install_sha256": "459c24040070c13c4abfcc973507df2cdc39140a5f644b26dfb8b29c99741772",
-  "tested_catalog_sha256": "0064682c2b576167424ca9f61706dd204bb5a353da4a9ce60f453067e3cab9c5",
+  "tested_catalog_sha256": "5e83b1db7d9eb509b1fdbd0b51d77e8895d00b62cb29a830da0dbbbed298f533",
   "payload": {
     "main_archive": "Payload/CODM_Data/StreamingAssets/0db.bytes",
-    "main_archive_sha256": "0064682c2b576167424ca9f61706dd204bb5a353da4a9ce60f453067e3cab9c5",
-    "main_archive_bytes": 47210326,
+    "main_archive_sha256": "8384f6f298cf01ae9d97a3599c6ee392be6d0515505b81471e0213e71272b697",
+    "main_archive_bytes": 47210258,
     "english_locale": "Payload/PersistentData/ExtractQts/57/LanguageBytes/cPVHOPHMaPLBpJJZRZNM_IG_lv.bytes",
-    "english_locale_sha256": "3e7f570ff4d96ed0f3d6c885a9f5494df9022c983a9ceec67cfa9ad1c0439ed9",
-    "english_locale_bytes": 41978
+    "english_locale_sha256": "92ef69b2381e02b804a9dcefa11bc6060b4897c3c359092dfadcd9a8b7e6f42c",
+    "english_locale_bytes": 48398
   },
   "translation_map": {
     "path": "translations.json.gz",
-    "sha256": "67fcdacab2d6410e05c082a25b1c421984184ab24942fae3b47bf3a4f1846d74",
-    "bytes": 3680465,
+    "sha256": "60d67f1cb67559030b95c99dddf4d0a3710b1ad3df78f94669384d46ecfe7991",
+    "bytes": 3572291,
     "pairs": 130989
   },
   "main_catalog": {
@@ -32,12 +32,21 @@
     "non_target_archive_members_verified_unchanged": 1402,
     "format_or_placeholder_mismatches": 0,
     "manual_reviewed_new_phrases": 160,
-    "targeted_legacy_phrase_overrides": 26
+    "targeted_legacy_phrase_overrides": 26,
+    "v0_3_exact_phrase_overrides": 110,
+    "v0_3_original_records_affected": 526,
+    "settings_global_terminology_overrides": 187,
+    "settings_record_occurrences_corrected": 264,
+    "patched_main_archive_sha256": "8384f6f298cf01ae9d97a3599c6ee392be6d0515505b81471e0213e71272b697",
+    "jesus_mistranslations_corrected": 38,
+    "jesus_catalog_records_corrected": 74,
+    "jesus_mistranslations_remaining_in_map": 0,
+    "jesus_named_asset_identifier_preserved": "Gesture_BuddyJesus"
   },
   "translation_method": {
     "new_337_sources": "111 exact English matches from the installed paired locale, 160 manually rewritten after local Argos drafting, and 66 manually authored exact entries or patterns.",
     "legacy_130652_phrases": "Existing translations received targeted terminology normalization and selected corrections, but were not reviewed one by one.",
-    "global_english_parity": "Not certified; matching English resources for this exact client build are unavailable.",
+    "global_english_parity": "Not certified; exact local English references are available for a limited subset only.",
     "canonical_terms": [
       "Battle Pass",
       "Calling Card",
@@ -52,7 +61,10 @@
       "Lobby",
       "COD Points",
       "Credits"
-    ]
+    ],
+    "v0_3_quality_review_batch": "110 exact phrase overrides, each logged with old/new wording, frequency, confidence, and reason; this is a targeted batch, not a full human review.",
+    "settings_global_terminology": "Curated settings labels and help text aligned with the official Activision Global controls guide; exact current-build parity is not certified.",
+    "settings_reference": "https://blog.activision.com/call-of-duty/2019-10/Getting-a-Grip-on-the-Call-of-Duty-Mobile-Controls"
   },
   "other_assets": {
     "TextJson": "70 entries inventoried; encrypted or unknown container format remains unresolved.",
@@ -67,13 +79,82 @@
     "accepts_exact_v0_1_direct_install_hash_upgrade": true,
     "exact_v0_1_direct_install_hash": "459c24040070c13c4abfcc973507df2cdc39140a5f644b26dfb8b29c99741772",
     "backup_before_write": true,
-    "game_install_modified_during_build": false
+    "game_install_modified_during_build": false,
+    "accepts_exact_v0_2_package_hash_upgrade": true,
+    "exact_v0_2_package_hash": "0064682c2b576167424ca9f61706dd204bb5a353da4a9ce60f453067e3cab9c5",
+    "accepts_previous_v0_3_draft_hash_upgrade": true,
+    "previous_v0_3_draft_hash": "ad4f9017e9d05706cb3be6f9ce5987301d0e5e7573272c1c825ba7dec6adf04f",
+    "accepts_previous_v0_3_lobby_qa4_sha256": true,
+    "previous_v0_3_lobby_qa4_sha256": "5e83b1db7d9eb509b1fdbd0b51d77e8895d00b62cb29a830da0dbbbed298f533",
+    "settings_candidate_sha256": "8384f6f298cf01ae9d97a3599c6ee392be6d0515505b81471e0213e71272b697",
+    "accepts_previous_v0_3_settings_qa1_sha256": true,
+    "previous_v0_3_settings_qa1_sha256": "bec0e0b0e11f501de5618b3203745e9189b1655c2de2d7b5748d4fe057cd5f50",
+    "accepts_previous_v0_3_settings_qa2_sha256": true,
+    "previous_v0_3_settings_qa2_sha256": "1739999dee308569d3a5f618fac25cf3a33ca23460578e64f5d5d7469dd9f621",
+    "accepts_previous_v0_3_settings_qa3_sha256": true,
+    "previous_v0_3_settings_qa3_sha256": "f884e2bff9b1b67a937885dc2890ab80c54846862b65b6e6b65716c35b3aedbf",
+    "accepts_previous_qa3_active_locale_sha256": true,
+    "previous_qa3_active_locale_sha256": "4f9eaaab4ec3aa44b823d8d271bf7f59d7874b21f10466e6bc6debbb3ced204f",
+    "accepts_previous_qa3_secondary_locale_sha256": true,
+    "previous_qa3_secondary_locale_sha256": "e99badfefaf7a8f82d4d0d1984c5a9f4190b42715f6279b20556acbccb5de4f0"
   },
   "limitations": [
-    "This release replaces every CJK-bearing record in the main 0db language catalog, including login and loading entries found there.",
-    "It does not cover opaque tables, server-delivered content, or text baked into images and videos; this is not a full-client translation.",
-    "The 130,652 phrases inherited from v0.1 were not individually reviewed; long descriptions may still sound unnatural.",
-    "Exact COD Mobile Global wording is not certified because a matching Global catalog for this client build is unavailable.",
-    "The user confirmed the v0.2 clone operates; no screen-by-screen visual review has been recorded."
-  ]
+    "The patch covers the analyzed main language catalog and selected lobby locale tables only; server-delivered text, opaque resources, and text embedded in artwork or video are outside scope.",
+    "The user reported that the final v0.3 clone works. This is not independent verification for other client builds or after updates.",
+    "A China-only creator display name and an unidentified lobby map-introduction label remain unresolved; some server-provided or event-panel text may also remain Chinese.",
+    "The 130,652 phrases inherited from v0.1 were not individually human-reviewed; long legacy descriptions may sound unnatural.",
+    "Exact COD Mobile Global wording is not certified for all strings; only matched or explicitly referenced Global wording was aligned.",
+    "The patch modifies local game files. It has no publisher authorization and may trigger anti-cheat checks or account sanctions, including a ban. No ban-safe guarantee is made.",
+    "This is the final release. The project is discontinued and future game updates will not be supported."
+  ],
+  "previous_v0_1_package_sha256": "626d73a33c935dafc139635cb995a8ea717b4054359789f0a0da909af072f127",
+  "lobby_locale_table": {
+    "path": "PersistentData/ExtractQts/57/LanguageBytes/cPVHOPHMaPLBpJJZRZNM_IG_eu.bytes",
+    "source_sha256": "7d38c6e0ff7542c96ff37d158ecf2f2a748a662ebfbfab9f0eb2404f6b043107",
+    "previous_qa2_sha256": "a8736afb6a301d167c69892779d19d4259dbeb40b3a9727ada10cbc303986924",
+    "patched_sha256": "a54454b1bd34691d98b62415721a084cced255578c46076388506160500d7f02",
+    "source_cjk_rows_translated": 42,
+    "remaining_chinese_creator_display_names": 1,
+    "unknown_locale_versions_preserved": true,
+    "store_china_specific_rows_retained": 47
+  },
+  "active_english_locale_table": {
+    "path": "PersistentData/ExtractQts/57/LanguageBytes/cPVHOPHMaPLBpJJZRZNM_IG_lv.bytes",
+    "source_sha256": "7aac3cce704dd1cc89af94955470803aeaee197d140dde5c4e45c898c1e58e0f",
+    "patched_sha256": "92ef69b2381e02b804a9dcefa11bc6060b4897c3c359092dfadcd9a8b7e6f42c",
+    "source_records": 2067,
+    "patched_records": 2280,
+    "exact_key_changes": 249,
+    "added_keys": 213,
+    "filled_blank_keys": 36,
+    "english_phrase_map_values": 167,
+    "manual_values": 82,
+    "remaining_chinese_creator_display_names": 1
+  },
+  "lobby_frontend_coverage": {
+    "paired_chinese_source_rows": 1016,
+    "missing_or_blank_english_values_filled": 249,
+    "secondary_table_chinese_values_translated": 42,
+    "visual_confirmation": "User reported the final clone works; one China-only creator name and an unidentified map-introduction label may remain.",
+    "unresolved_static_or_remote_lobby_label": "新玩法地图介绍",
+    "protected_chinese_creator_display_names": true,
+    "china_exclusive_store_text_preserved": 47
+  },
+  "settings_localization": {
+    "reference": "https://blog.activision.com/call-of-duty/2019-10/Getting-a-Grip-on-the-Call-of-Duty-Mobile-Controls",
+    "corrected_phrases": 187,
+    "corrected_occurrences": 264,
+    "visual_confirmation": "User reported the settings translation works in the clone; full Global wording parity is not certified.",
+    "scope_note": "Static Settings, Controls, Audio and Graphics, Sensitivity, and related control help strings identified in the main language catalog; exact current Global build parity remains unverified."
+  },
+  "store_localization": {
+    "reference_method": "paired original English locale plus official Activision Season 8 and Season 9 articles",
+    "paired_english_entries_copied": 37,
+    "official_global_manual_entries_without_paired_value": 5,
+    "explicit_global_key_corrections": 14,
+    "china_specific_entries_kept_chinese": 47,
+    "visual_confirmation": "User reported the final store and Jesus/day correction batch works in the clone; only classified Global-equivalent entries were translated."
+  },
+  "release_status": "discontinued-final",
+  "ban_risk_notice": "Unofficial patch modifies game files; anti-cheat or account sanctions, including a ban, are possible. No ban-safe guarantee."
 }

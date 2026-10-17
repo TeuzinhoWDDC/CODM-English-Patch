@@ -1,40 +1,21 @@
-# CODM English Patch v0.2
+> **Historical release; project discontinued.** v0.3 is the final edition. This patch modifies game files and may trigger anti-cheat checks or account sanctions, including a ban. A text-only patch is not guaranteed to be safe. Use at your own risk; an unmodified official installation is the lowest-risk option.
 
-## What changed
+# CODM English Patch v0.2 (historical)
 
-- Replaces all Chinese-bearing records in the analyzed main `0db.bytes`
-  language catalog: 164,256 records across 130,989 unique phrases.
-- Includes the login and loading strings found in that catalog.
-- Adds the 337 Chinese phrases missing from v0.1, reuses 111 exact English
-  matches found in the installed game's paired locale, and adds selected
-  terminology and high-visibility corrections.
-- Keeps unrelated archive members unchanged and checks formatting tokens
-  before saving.
-- Adds an upgrade path for the exact v0.1 package hash and the direct v0.1
-  install hash recorded for the analyzed build.
-- Creates a timestamped backup before writing.
+This release is superseded by v0.3. It is preserved for reference and is no longer maintained.
 
-## Install
+## Historical changes
 
-Download `CODM-English-Patch-v0.2.zip`, extract it, close the game and emulator,
-then run `Apply-Translation.cmd`. Enter the game folder that contains
-`CODM.exe` and `CODM_Data` when prompted. The [Portuguese tutorial](TUTORIAL-PT-BR.md)
-explains installation, updates, and restoration.
+- Replaced Chinese-bearing records in the analyzed main `0db.bytes` language catalog: 164,256 records across 130,989 unique phrases.
+- Included login and loading strings found in that catalog.
+- Added 337 phrases missing from v0.1 and 111 exact English matches from the installed paired locale, with selected terminology and high-visibility corrections.
+- Preserved unrelated archive members and created a timestamped backup before writing.
 
 ## Limits
 
-This release translates the main language catalog only. Opaque data tables,
-server-delivered text, and text baked into images or videos are not covered.
-The 130,652 phrases inherited from v0.1 have not all been individually
-reviewed; long descriptions may still sound unnatural. Exact parity with the
-Global client is not certified because a matching English catalog for this
-client build is unavailable.
+Opaque data tables, server-delivered text, and text baked into images or videos were not covered. The 130,652 phrases inherited from v0.1 were not all individually reviewed, and exact Global parity was not certified. Do not assume compatibility with later client updates. No updates or support are planned.
 
-The v0.2 clone was reported working by the user. A complete screen-by-screen
-visual review has not been recorded. This patch is unofficial, does not
-include the complete game client, and does not change login or servers.
-
-## Download integrity
+## Historical download integrity
 
 - File: `CODM-English-Patch-v0.2.zip`
 - Size: 75,966,559 bytes
